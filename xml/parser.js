@@ -1,4 +1,4 @@
-define(['dojo/_base/kernel', 'dojo/_base/lang', 'dojo/_base/array', 'dojo/_base/window', 'dojo/_base/sniff'], function(dojo){
+define(['dojo/_base/kernel', 'dojo/_base/array', 'dojo/_base/lang', 'dojo/_base/window', 'dojo/_base/sniff'], function(dojo, array){
 
 dojo.getObject("xml.parser", true, dojox);
 
@@ -181,9 +181,11 @@ dojox.xml.parser.innerXML = function(/*Node*/node){
 	if(node.innerXML){
 		return node.innerXML;	//	String
 	}else if(node.xml){
-		return node.xml;		//	String
+		return array.map(node.childNodes, function (node) { return node.xml; }).join("");//  String
 	}else if(typeof XMLSerializer != "undefined"){
-		return (new XMLSerializer()).serializeToString(node);	//	String
+		var serializer = new XMLSerializer();
+
+        return array.map(node.childNodes, function (node) { return serializer.serializeToString(node); }).join("");//  String
 	}
 	return null;
 };

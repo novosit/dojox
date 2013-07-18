@@ -1017,5 +1017,6 @@ var _ListInputInputBox = declare("dojox.form._ListInputInputBox", [ValidationTex
 		this.inherited(arguments);
 	}
 });
+ListInput._ListInputInputItem = _ListInputInputItem;
 return ListInput;
 });

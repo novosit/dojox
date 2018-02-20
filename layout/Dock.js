@@ -2,7 +2,7 @@ define(["dojo/_base/lang", "dojo/_base/window", "dojo/_base/declare",
 		"dojo/_base/fx", "dojo/on", "dojo/_base/array", "dojo/_base/sniff",
 		"dojo/window", "dojo/dom", "dojo/dom-class", "dojo/dom-geometry", "dojo/dom-construct",
 		"dijit/_TemplatedMixin", "dijit/_WidgetBase", "dijit/BackgroundIframe", "dojo/dnd/Moveable",
-		"./ContentPane", "./ResizeHandle", "dojo/text!./resources/FloatingPane.html", "dojo/domReady!"], function(
+		"./ContentPane", "./ResizeHandle", "dojo/text!./resources/FloatingPane.html", "dojo/domReady"], function(
 	lang, winUtil, declare, fx, on, arrayUtil, 
 	has, windowLib, dom, domClass, domGeom, domConstruct, _TemplatedMixin, _WidgetBase, BackgroundIframe, 
 	Moveable, ContentPane, ResizeHandle, template){
